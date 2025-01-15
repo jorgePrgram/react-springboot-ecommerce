@@ -1,0 +1,33 @@
+.containerCantidad{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.botonMinus,.botonMas{
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.inputNumber{
+    width: 100%;
+     text-align: center;
+     padding: 5px; 
+ }
+.infoProduct {
+    text-align: center;  /* Add this line */
+}
+
+.boton{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 20px 10px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+
+}

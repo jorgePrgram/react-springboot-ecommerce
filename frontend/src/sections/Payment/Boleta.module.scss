@@ -1,0 +1,62 @@
+.boletaContainer {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boletaHeader {
+    text-align: center;
+    margin-bottom: 12px;
+  
+    .boletaTitle {
+      color: #333;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .boletaBody {
+    ul.boletaItems {
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+  
+  .boletaItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+  
+    &:last-child {
+      border-bottom: none;
+    }
+  
+    .productoId {
+      color: #555;
+    }
+  
+    .cantidad {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .productoNombre {
+    color: #333;
+    font-weight: normal; /* O cualquier estilo que prefieras */
+    margin: 0 10px; /* Espaciado entre ID y cantidad */
+  }
+  
+  .boletaFooter {
+    text-align: right;
+    margin-top: 12px;
+  
+    .total {
+      font-size: 1.2rem;
+      color: #007bff;
+    }
+  }

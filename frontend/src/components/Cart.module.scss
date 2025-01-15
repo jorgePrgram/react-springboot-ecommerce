@@ -1,0 +1,49 @@
+@import '../styles/mixins';
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 999; /* Debe estar por debajo de la ventana modal */
+  }
+
+.ventanaModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ajusta el ancho según tu necesidad */
+    max-width: 90%; /* Para hacerlo responsive */
+    border-radius: 10px; /* Opcional, añade bordes redondeados */
+   
+}
+
+.cerrarCarrito{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #000;
+}
+
+.botonTramitar{
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+
+@include breakpoint(tablet){
+    .ventanaModal {
+        width: 400px;
+    }
+}

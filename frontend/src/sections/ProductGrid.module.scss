@@ -1,0 +1,57 @@
+@import '../styles/mixins';
+.containerItems{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+   margin-top: 20px;
+   width: 100%;
+   
+}
+
+.productItem{
+    border-radius: 10px;
+    overflow: hidden;
+    background-color:bisque;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+    }
+}
+
+   
+.itemImages{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+
+@include breakpoint(small-tablet){
+
+    .containerItems{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+}
+
+@include breakpoint(tablet){
+.containerItems{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+}
+@include breakpoint(desktop) {
+    .containerItems {
+        grid-template-columns: repeat(4, 1fr); /* Mantener las cuatro columnas en pantallas grandes */
+        padding: 0 20px; /* Ajusta el padding para evitar desbordamientos */
+    }
+}
+
+
