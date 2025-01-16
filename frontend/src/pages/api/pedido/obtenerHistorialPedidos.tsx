@@ -16,9 +16,9 @@ const obtenerHistorialPedidos = async (usuarioId: number, token: string) => {
                     const detallesPedido = await getPedidoById(pedido.id, token);
 
                     const detallesCompletos = await Promise.all(
-                        detallesPedido.detallePedidos.map(async (detalle: { id: number }) => { // Especifica el tipo aquí
+                        detallesPedido.detallePedidos.map(async (detalle: { id: number }) => { 
                             try {
-                                const detalleId = detalle.id; // Asegúrate de que detalle tenga la propiedad id
+                                const detalleId = detalle.id; 
                                 const detallePedido: DetallePedido = await getDetallePedido(detalleId, token);
 
                                 if (!detallePedido || !detallePedido.producto || !detallePedido.producto.nombre || detallePedido.producto.precio === undefined) {
@@ -32,7 +32,7 @@ const obtenerHistorialPedidos = async (usuarioId: number, token: string) => {
                                     nombreProducto: detallePedido.producto.nombre,
                                 };
                             } catch (error) {
-                                console.error(`Error al obtener el detalle del pedido con ID ${detalle.id}:`, error); // Cambia detalleId por detalle.id
+                                console.error(`Error al obtener el detalle del pedido con ID ${detalle.id}:`, error); 
                                 return null;
                             }
                         })

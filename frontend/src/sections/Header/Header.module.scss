@@ -1,13 +1,9 @@
 @import '../../styles/mixins';
 .header {
     width: 100%;
-/*
-      display: flex;
-      justify-content: space-between;*/
       padding: 30px 0 40px 0;
       position: sticky;
       top: 0;
-      /*z-index: 1000;*/
       background-color: blue;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       overflow: hidden;

@@ -43,16 +43,10 @@ export interface Producto {
   
   export interface DetallePedido{
     id?: number;
-      //producto: { id: number;precio: };
       producto:Partial<Producto> & { id: number };
       cantidad: number;
       pedido:{id:number}
-  }/*
-      export interface DetallePedido {
-        producto: Producto;  // Producto completo, no solo 'id'
-        cantidad: number;
-        pedido: { id: number };
-      }*/
+  }
 
   export interface CarritoItem{
       id:number;
@@ -80,7 +74,7 @@ export interface PedidoCreado{
 }
 
 export interface Usuario {
-  id?: number;  // Opcional para cuando hagas GET y ya exista un ID
+  id?: number;  
   username: string;
   email: string;
   password: string;

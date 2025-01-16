@@ -40,7 +40,6 @@ const handleInicioClick = () => {
 };
 
 const handleSelectedCategory=(categoryId: number)=>{
-  /*setSelectedCategoryId(categoryId);*/
   setCategoryId(categoryId);
   console.log(`Categoría seleccionada: ${categoryId}`);
   

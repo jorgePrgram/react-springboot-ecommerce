@@ -5,7 +5,7 @@ import { CartContextProps, Producto, ProductoEnCarrito } from '@/interfaces/type
 export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 interface CartProviderProps {
-    children: ReactNode; // Especificar el tipo de children
+    children: ReactNode; 
   }
 
 export const CartProvider = ({ children }: CartProviderProps) =>{

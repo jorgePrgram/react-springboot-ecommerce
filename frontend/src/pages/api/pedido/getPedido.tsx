@@ -13,7 +13,7 @@ export const getPedidoById= async(pedidoId : number, token:  string)=>{
     }
     catch(error){
         console.error('Error al obtener el pedido:', error);
-        throw error; // Puedes manejar el error según tu lógica
+        throw error; 
     }
 
 }

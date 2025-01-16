@@ -27,7 +27,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
         if (storedToken && storedToken.split('.').length === 3) {
-            const decodedUser = obtenerUsuarioDelToken(storedToken); // Obtén el usuario decodificado
+            const decodedUser = obtenerUsuarioDelToken(storedToken); // Decodifica el token para obtener el usuario
             if (decodedUser) {
                 setUser(decodedUser);
                 setIsAuthenticate(true);
@@ -47,7 +47,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 setToken(token);
                 localStorage.setItem('token', token);
                 
-                const decodedUser = obtenerUsuarioDelToken(token); // Obtén el usuario directamente del token
+                const decodedUser = obtenerUsuarioDelToken(token); // Decodifica el token para obtener el usuario
                 setUser(decodedUser);
                 setIsAuthenticate(true);
             } else {
@@ -81,7 +81,7 @@ export const obtenerUsuarioDelToken = (token: string): User | null => {
     }
 
     try {
-        const decodedToken = jwtDecode<{ role: string; userId: string; sub: string; }>(token); // Cambiar el tipo aquí si es necesario
+        const decodedToken = jwtDecode<{ role: string; userId: string; sub: string; }>(token); 
 
         return {
             id: parseInt(decodedToken.userId), 

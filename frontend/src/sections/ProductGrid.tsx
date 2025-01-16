@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { getProducts } from '../pages/api/products/getProducts'; // Ajusta la ruta según tu estructura
 import styles from './ProductGrid.module.scss';
 import { Producto } from '@/interfaces/types';
 import Cart from '@/components/Cart';

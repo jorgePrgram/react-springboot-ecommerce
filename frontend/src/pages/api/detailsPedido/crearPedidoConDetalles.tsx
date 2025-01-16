@@ -29,7 +29,7 @@ export const crearPedidoConDetalles=async(
                 await postDetallePedido(pedidoId, detallePedido, token);
     
                 // Actualizar el stock del producto
-                await putProducts(detallePedido.producto.id, detallePedido.cantidad); // Ajustar la lógica de cantidad según sea necesario
+                await putProducts(detallePedido.producto.id, detallePedido.cantidad); 
             }
             console.log('Pedido y detalles creados con exito');
         } catch(error){
