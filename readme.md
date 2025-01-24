@@ -12,3 +12,12 @@ Tecnologías Utilizadas
 - Frontend:  Next.js (basado en React), TypeScript, CSS, Sass
 - Backend: Spring Boot
 - Base de Datos: MySQL
+
+Arquitectura
+El proyecto sigue una Arquitectura Hexagonal, separando las preocupaciones del dominio, adaptadores y puertos para facilitar la extensión y mantenimiento del sistema.
+
+Microservicios y Eureka
+Usa Eureka de Spring Cloud para el descubrimiento de servicios, permitiendo que los microservicios se registren y descubran dinámicamente.
+
+Pruebas Unitarias
+Se ha integrado JaCoCo para medir la cobertura de pruebas unitarias, asegurando la calidad y estabilidad del código.
